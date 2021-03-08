@@ -1,0 +1,7 @@
+<p>You haven't wrote something on that day</p>
+<a href="">Write something for that day</a>
+<form>
+	{% csrf_token %}
+    {{formd.as_p}}
+    <input type="submit" value="submit">
+</form>

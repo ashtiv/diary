@@ -1,0 +1,9 @@
+{% extends "accounts/base.html" %}
+<h1> Welcome {{user}} </h1>
+<h1>bb</h1>
+<form method="post">
+    {% csrf_token %}
+    {{formi.your_day}}
+    <input type="submit" value="submit">
+</form>
+{% endblock %}

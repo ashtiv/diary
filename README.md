@@ -1,1 +1,1 @@
-# diary
+# A django based diary with registration, login and logout methods. You can add,change and delete your day to day activities here and can access them any time. You can see your past diary writings also.

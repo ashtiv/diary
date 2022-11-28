@@ -1,0 +1,53 @@
+
+{% extends "accounts/base.html" %}
+{% block content %}
+{% load static %}
+<div id="header">
+  <div id="logo">
+    <h1>Welcome {{user}}</h1>
+    <!-- <h2><a href="#">Free CSS Templates</a></h2> -->
+  </div>
+</div>
+<div id="content">
+  <div id="colOne">
+    <div id="latest-post">
+      <h2 class="title">Your today's writing</h2>
+      <h3 class="posted">{{context.d}} by {{user}}</h3>
+      <div class="story"><img src="{% static 'images/img3.jpg' %}" alt="" width="180" height="135" class="image" />
+        <p>{{context.data}}</p>
+      </div>
+    </div>
+    <div id="recent-posts">
+      <!-- <h3 class="title">More options</h3> -->
+      <ul>
+        <li><strong><a href="/write">Write something today</a></strong><br />
+          </li>
+      </ul>
+    </div>
+    <div style="clear: both; height: 1px;"></div>
+  </div>
+  <div id="colTwo">
+    <ul>
+      <li>
+        <h2>Pages</h2>
+        <ul>
+          <li class="active"><a id="page1" href="/">Home</a></li>
+          <li><a id="page2" href="/wholediary">Your entries</a></li>
+          <li><a id="page3" href="/accounts/logout">Logout</a></li>
+          <!-- <li><a id="page3" href="#">My Favorites</a></li> -->
+          <!-- <li><a id="page4" href="#">About Me</a></li> -->
+          <!-- <li><a id="page5" href="#">Contact Me</a></li> -->
+        </ul>
+      </li>
+    </ul>
+    <div style="clear: both;">&nbsp;</div>
+  </div>
+</div>
+<!-- <h1> Welcome {{user}} </h1>
+<p>{{context.d}}</p>
+{{context.data}}
+<br><br><br>
+<a href="write">Write something Today</a>
+<br><br><br>
+<a href="wholediary">Your Diary</a> -->
+{% endblock %}

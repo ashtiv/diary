@@ -1,0 +1,1 @@
+web: gunicorn yourday.wsgi --log-file -

@@ -1,0 +1,58 @@
+
+{% extends "accounts/base.html" %}
+{% block content %}
+{% load static %}
+<div id="header">
+  <div id="logo">
+    <h1>Welcome</h1>
+    <!-- <h2><a href="#">Free CSS Templates</a></h2> -->
+  </div>
+</div>
+<div id="content">
+  <div id="colOne">
+    <div id="latest-post">
+      <h2 class="title">Your need to login</h2>
+      <h3 class="posted"></h3>
+      
+        <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Create">
+    <br><br>
+    
+    
+</form>
+  Already have an account<br>
+  <a href="/accounts/login">Login</a>
+      
+    <!-- <div id="recent-posts"> -->
+      <!-- <h3 class="title">More options</h3> -->
+      
+    </div>
+    <div style="clear: both; height: 1px;"></div>
+  </div>
+  <div id="colTwo">
+    <ul>
+      <li>
+        <h2>Pages</h2>
+        <ul>
+          <li class="active"><a id="page1" href="/">Home</a></li>
+          <li><a id="page2" href="/wholediary">Your entries</a></li>
+          <!-- <li><a id="page3" href="#">My Favorites</a></li> -->
+          <!-- <li><a id="page4" href="#">About Me</a></li> -->
+          <!-- <li><a id="page5" href="#">Contact Me</a></li> -->
+        </ul>
+      </li>
+    </ul>
+    <div style="clear: both;">&nbsp;</div>
+  </div>
+</div>
+<!-- <h1> Welcome {{user}} </h1>
+<p>{{context.d}}</p>
+{{context.data}}
+<br><br><br>
+<a href="write">Write something Today</a>
+<br><br><br>
+<a href="wholediary">Your Diary</a> -->
+{% endblock %}
+
